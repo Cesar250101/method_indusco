@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_method_indusco_method_indusco,method_indusco.method_indusco,model_method_indusco_method_indusco,,1,0,0,0
