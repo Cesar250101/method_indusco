@@ -11,4 +11,4 @@ class Crm(models.Model):
     tiene_planos = fields.Char(string='Tiene Planos')
     como_cotizar = fields.Char(string='Como Cotizar')
     tipo_panel = fields.Char(string='Tipo Panel')
-    
+    pagina_origen=fields.Char(string='Página Origen')

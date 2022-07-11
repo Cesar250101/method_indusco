@@ -1,6 +1,18 @@
 <odoo>
   <data>
 
+    <!-- model.name inherit tree view -->
+    <record id="method_indusco.crm_case_tree_view_leads" model="ir.ui.view">
+      <field name="name">method.indusco.crm.case.tree.view.leads</field>
+      <field name="model">crm.lead</field>
+      <field name="inherit_id" ref="crm.crm_case_tree_view_leads"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='create_date']" position="after">
+          <field name="pagina_origen" />
+        </xpath>
+      </field>
+    </record>
+
     <!-- crm.leads inherit form view -->
     <record id="method_indusco.crm_case_form_view_leads" model="ir.ui.view">
       <field name="name">method.indusco.crm.case.form.view.leads</field>
@@ -15,6 +27,8 @@
               <field name="tiene_planos" />
               <field name="como_cotizar" />
               <field name="tipo_panel" />
+              <field name="pagina_origen" />
+              
           </group>        
             
           </page>
