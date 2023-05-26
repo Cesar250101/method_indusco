@@ -1,6 +1,43 @@
 <odoo>
   <data>
 
+    <!-- sale.order inherit form view -->
+    <record id="method_indusco.view_order_form" model="ir.ui.view">
+      <field name="name">method.indusco.view.order.form</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.view_order_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='payment_term_id']" position="after">
+          <field name="nro_serie" />
+        </xpath>        
+      </field>
+    </record>
+
+    <!-- sale.view_quotation_tree -->
+    <record id="method_indusco.view_quotation_tree" model="ir.ui.view">
+      <field name="name">method.indusco.view.quotation.tree</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.view_quotation_tree"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='name']" position="after">
+          <field name="nro_serie" />
+        </xpath>        
+      </field>
+    </record>
+
+    <!-- sale.view_sales_order_filter -->
+    <record id="method_indusco.view_sales_order_filter" model="ir.ui.view">
+      <field name="name">method.indusco.view.sales.order.filter</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='user_id']" position="after">
+          <field name="nro_serie"/>
+        </xpath>        
+      </field>
+    </record>
+
+
     <!-- model.name inherit tree view -->
     <record id="method_indusco.crm_case_tree_view_leads" model="ir.ui.view">
       <field name="name">method.indusco.crm.case.tree.view.leads</field>
